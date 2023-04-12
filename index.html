@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/themify-icons-font/themify-icons/themify-icons.css">
+   
+    
+    
+    
+    <!-- <link rel="stylesheet" href="./asset/icons-font/themify-icons/themify-icons.css"> -->
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <ul id="nav">
+                <!-- tại soa dùng thẻ a, tài vì phải bấm vào được -->
+                <li><a href="#">HOME</a></li>
+                <li><a href="#band">BAND</a></li>
+                <li><a href="#tour">TOUR</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li>
+                    <a href="#">
+                        MOVE
+                             <i class="icon_menu ti-angle-down"></i>
+                    </a>
+                       
+                    <!-- tạo 1 thẻ con cho thằng move -->
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Phương tiện truyền thông
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- bắt đầu ti-search -->
+            <div class="  ti-search-btn">
+                <i class="icon_search ti-search"></i>
+            </div>
+            <!-- kết thúc -->
+        </div>
+
+        <div id="slider">
+          <div class="slide1">
+            <img src="./asset/img/slide/side1.jpg" alt="anh the band">
+          </div>
+          <div class="text-centent">
+            <h2 class="text-heaading">NEW YORK</h2>
+            <div class="text-description">Bầu không khí ở New York là lorem ipsum.</div>
+          </div>
+            
+        </div>
+        <div id="content">
+                <div id="band" class="content-section">
+                    <h2 class="section-heading">THE BAND</h2>
+                    <p class="section-subheading">We love music</p>
+                    <p class="about-centent">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
+                    <div class="content_band_member">
+                        <div class="band_member">
+                            <p class="name_member">Name</p>
+                            <img src="./asset/img/thanh_vien/bandmember.jpg" alt="Name" class="member_img">
+                            
+                        </div>
+                        <div class="band_member">
+                            <p class="name_member">Name</p>
+                            <img src="./asset/img/thanh_vien/bandmember.jpg" alt="Name" class="member_img">
+                            
+                        </div>
+                        <div class="band_member">
+                            <p class="name_member">Name</p>
+                            <img src="./asset/img/thanh_vien/bandmember.jpg" alt="Name" class="member_img">
+                            
+                        </div>
+                        <!-- khi dùng float thì cho thằng clear nằm cuối -->
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div id="tour" class="tour_section">
+                    <div class="content_tour">
+                        <!-- text_while là thẻ ưu tiên trong css -->
+                        <h2 class="content_tour_heading text_while">TOUR DATES</h2>
+                        <p class="content_tour_subheading text_while">Remember to book your tickets!</p>
+                        <ul class="tickets-list">
+                            <li>September <span class="sold-out text_while">Sold out</span></li>
+                            <li>October <span class="sold-out text_while">Sold out</span></li>
+                            <li>November <span class="number text_while">3</span></li>
+                        </ul>
+
+                        <div class="places-list">
+                            <div class="places-item">
+                                <img src="./asset/img/phong_canh/phong_canh1.jpg" alt="ảnh New York" class="anh-hover">
+                                <div class="places-content">
+
+                                    <h2 class="places-heading">New York</h2>
+                                    <p class="places-subheading">Fri 27 Nov 2016</p>
+                                    <p class="centent_places">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <a href="#" class="btn">Buy Tickets</a>
+                                </div>
+                            </div>
+                            <div class="places-item">
+                                <img src="./asset/img/phong_canh/phong_canh2.jpg" alt="ảnh New York" class="anh-hover">
+                                <div class="places-content">
+                                    
+                                    <h2 class="places-heading">Paris</h2>
+                                    <p class="places-subheading">Sat 28 Nov 2016</p>
+                                    <p class="centent_places">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <a href="#" class="btn">Buy Tickets</a>
+                                </div>
+                            </div>
+                            <div class="places-item">
+                                <img src="./asset/img/phong_canh/phong_canh3.jpg" alt="ảnh New York" class="anh-hover">
+                                <div class="places-content">
+                                    
+                                    <h2 class="places-heading ">San Francisco</h2>
+                                    <p class="places-subheading">Sun 29 Nov 2016</p>
+                                    <p class="centent_places">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                    <a href="#" class="btn">Buy Tickets</a>
+                                </div>
+                            </div>
+                            <!-- tại sao dùng clear tại vì khi dùng float thì thằng cha sẽ không chứa thằng
+                            con places-list nữa nên nó sẽ tách ra ngoài-->
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact" class="contact-section">
+                    <h2 class="contact-heading  text-center">CONTACT</h2>
+                    <p class="contact-subheading  text-center">Fan? Drop a note!</p>
+                    <div class="row-section">
+                        <div class="row float-left col-two contact-info">
+                           <p class="rowcontent"><i class="ti-location-pin"></i>Chicago, US</p>
+                           <p class="rowcontent"><i class="ti-mobile"></i>Phone: +00 151515</p>
+                           <p class="rowcontent"><i class="ti-email"></i>Email: mail@mail.com</p>
+                        </div>
+                        
+                        <div class="row float-left col-two ">
+                            <form action="#">
+                                <div class="form fontsize_form">
+
+                                    <div class="form-contact col-two float-left col-form">
+                                        <input type="text" name="" placeholder="Name" required id="" class="form-control input fontsize_form">
+                                    </div>
+                                    <div class="form-contact col-two float-left col-form">
+                                        <input type="Email" name="" placeholder="Email" required id="" class="form-control input fontsize_form">
+                                    </div>
+                                  
+                                </div>
+                                <div class="form margin-top_8">
+                                    <div class="form-contact col-form col-full">
+                                        <input type="Messager" name="" placeholder="Messager" required id="" class="form-control2 input fontsize_form">
+                                    </div>
+                                </div>
+                               
+                                    <input class="btn margin-tren-duoi-16 float-right fontsize_form " type="submit" value="SEND">
+                               
+                                
+                            </form>
+
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div>
+                <div id="map" class="map-section">
+                    <img src="./asset/img/map/map.jpg" alt="Map">
+                </div>
+                
+        </div>
+        <div id="footer">
+            <div class="socials text-center ">
+                <a href="#"><i  class="ti-facebook"></i></a>
+                <a href="#"><i  class="ti-instagram"></i></a>
+                <a href="#"><i  class="ti-youtube"></i></a>
+                <a href="#"><i  class="ti-pinterest"></i></a>
+                <a href="#"><i  class="ti-twitter"></i></a>
+                <a href="#"><i  class="ti-linkedin"></i></a>
+              </div>
+              <p class="link_banquyen text-center">Powered by <a href="#">w3.css</a></p>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>

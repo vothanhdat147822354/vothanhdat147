@@ -1,0 +1,473 @@
+/* reset css tại vì mặc định của wed khác nhau nên phải reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* thể nào có chữ sẽ kế thừa */
+html{
+    /* hành động cuộn  */
+    scroll-behavior: smooth;
+    font-family: Verdana,sans-serif;
+}
+body {
+    font-family: "Lato", sans-serif;
+}
+/* thẻ ưu tiên nhất */
+/* csss nhanh lên tên của class */
+.fontsize_form{
+    font-size: 15px !important;
+}
+.text_while{
+    color:#fff !important;
+}
+.col-full{
+    width: 100%;
+}
+.col-form{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-two{
+    width: 50%;
+}
+.float-right{
+    float: right !important;
+}
+.float-left{
+    float: left !important;
+}
+#content .btn{
+    /* bỏ gạch chân */
+    text-decoration: none;
+    color: #fff ;
+    background-color: #000;
+    padding: 10px 15px;
+    border: none;
+}
+
+#content .btn:hover{
+    background-color: #ccc;
+    color: #000 !important;
+    /* chỉ chuột vào sẽ hiện biểu tượng bàn tay */
+    cursor: pointer;
+}
+.input{
+    padding: 8px;
+    width: 100%;
+}
+.text-center{
+    text-align: center !important;
+}
+.form{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.form::after{
+    content: "";
+    display: block;
+    clear: both;
+
+}
+.contact-section::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.margin-top_8{
+    margin-top: 8px !important;
+}
+.margin-tren-duoi-16{
+    margin: 16px 0px;
+}
+
+/* một số câu hỏi
+1. vị trí 
+2. kích thước(widte, hight)
+3. màu sắc
+4. kiểu dáng */
+
+/* khi dùng float thì sẽ bị lỗi kh ôm hết nhưng thằng con bên dưới */
+.clear{
+    clear:both;
+}
+#header{
+    /*tại  sao right 0 vì khi dùng fixed thì tính chất kế thừa của bog
+    k còn nữa nên dùng right để nó dài ra hết wed */
+    position: fixed;
+    /* top 0, left 0 để cho chắc chắc thanh heder sẽ nổi 
+    sát bên trái và ở trên */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 49px;
+    background-color: black;
+    /*có tác dụng là không bị thằng khác đè lên */
+    z-index: 1;
+    
+}
+/* bắt đầu nav */
+#nav{
+    /* nếu k dùng khối thì thẻ nav chiếm hết phần header và không
+    bỏ thằng search vào được */
+    display: inline-block;
+}
+/* tại sao phải dùng ">" vì nó chứa position relation 
+nên chỉ chứa cho thẻ cha */
+#nav >li{
+    /*display: inline-block; là cho thẻ li con của nav nằm ngang
+    và có thể thay đổi kích thước bằng hight hoặc widget  */
+    display: inline-block;
+    position: relative;
+    
+    
+}
+#nav .icon_menu{
+    font-size: 14px;
+}
+
+#nav>li>a{
+    
+    color: beige;
+    /* vết hoa */
+   text-transform: uppercase;
+
+}
+#nav li a{
+   
+    /* bỏ gạch chân */
+    text-decoration: none;
+    /* canh giữa */
+    line-height: 49px;
+    /* khoăng cách các chữ */
+    padding:0 24px;
+    display:inline-block ;
+    
+}
+#nav li:hover .subnav{
+    display: block;
+}
+/* có thể hiểu là hover là khi trỏ chuột vào thì sẽ đổi màu */
+#nav>li:hover>a{
+    color: #000;
+    background-color: #fff;
+   
+}
+
+#nav .subnav{
+    /* ẩn đi , và hiện lên khi click vào thẻ li */
+    display: none;
+    position:absolute;
+    /* tại sao phải cần top 100 vì để cho nó chắc chắn khi 
+    thẻ con hiện ra sẽ nằm bên dưới thẻ li */
+    top: 100%;
+    background-color: #fff;
+    /* bỏ dấu chấm trước đầu hàng */
+    list-style-type: none;
+    /* tăng diện tích thẻ dài ra */
+    width: 300px;
+    box-shadow: 0 0 10px rgb(0, 0,0,0.9);
+}
+#nav .subnav li a{
+    padding: 0 16px;
+   /*widget làm cho hiệu ứng tràn khung lun */
+    width: 100%;
+    color: #000;
+    line-height: 38px;
+}
+#nav .subnav li:hover a{
+    color: #fff;
+    background-color: black;
+}
+/* kết thúc nav */
+
+/* bắt đầu search */
+#header .ti-search-btn{
+    padding: 0 21px;
+    float: right;
+    line-height: 49px;
+    /* click vào  ti-search-btn thì sẽ hiện bàn tay không không phải 
+    bỏ vào hover*/
+    cursor: pointer;
+}
+#header .ti-search-btn:hover {
+    background-color: red;
+}
+#header .icon_search{
+    color: #fff;
+    font-size: 20px;
+   
+  
+}
+
+#slider {
+    /* tại vì khi mà header dùng filex thì nó sẽ nổi lên và cai slider sẽ chiếm hết phần margin của 
+    header lun nên slider phải trừ thằng margin header ra */ 
+    position: relative;
+    margin-top: 49px;
+    /* top: 0;
+    width: 500px; */
+    /* chiều cao của nó sẽ bằng  50% chiều ngang của chính nó
+    khi dùng như này thì khi phóng to thu nhỏ vẫn như vậy không thay đổi ảnh*/
+    /* padding-top: 50%; */
+       /* background: url('/asset/img/slide/side1.jpg') top center/cover no-repeat; */
+    
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+      
+}
+#slider .text-centent{
+    /* để nó hiển thị 100% và khi dùng text-align thì nó sẽ canh giữa slide */
+    width: 100%;
+    font-size: 15px;
+    /* lm cho dòng chữ nè lên  */
+    position: absolute;
+    /* khoẳng cách dưới */
+    bottom: 47px;
+    color: #fff;
+    /* canh giữa */
+    text-align: center;
+}
+
+
+#slider .text-heaading{
+    font-weight: 500;
+    font-size: 24px;
+    /* khoẳng cách  dưới của h2*/
+    margin-bottom: 25px;
+
+}
+#slider .text-description{
+
+
+}
+#slider .slide1 img{
+    width: 100%;
+}
+#content .content-section{  
+   width: 800px;
+   max-width: 100%;
+   /* trên dưới 64px, trái phải 0 */
+   padding: 64px 0 112px;
+   /* canh chỉnh chính giữa của khối div */
+   margin-left: auto;
+   margin-right: auto;
+   /* margin:0px 157.6px; */
+}
+
+    
+
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+    /* làm cho chữ mỏng lại */
+    font-weight: 400;
+    /* khoẳng cách các kí tự */
+    letter-spacing: 4px;
+}
+#content .section-subheading{
+    text-align: center;
+    margin: 15px 0;
+    font-size: 15px;
+    font-style: italic;
+    /* độ trong  suốt của chữ */
+    opacity: 0.6;
+}
+#content .about-centent{
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.4;
+}
+#content .content_band_member{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+#content .band_member {
+    float: left;
+    width: calc(100%/3);
+    text-align: center;
+   
+}
+#content .name_member{
+    margin: 15px 0px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+#content .member_img{
+    width: 154px;
+    border-radius: 4px;
+    
+}
+#content .tour_section{
+    background-color: #000;
+}
+#content .content_tour{
+    width: 800px;
+   /* trên dưới 64px, trái phải 0 */
+   padding: 64px 16px 122px;
+   /* canh chỉnh chính giữa của khối div */
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+#content .content_tour_heading{
+    text-align: center;
+    margin: 10px 0;
+    letter-spacing: 4px;
+    /*  cho chữ mỏng lại */
+    font-weight: 400;
+    font-size: 30px;
+}
+#content .content_tour_subheading{
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0px;
+    font-style: italic;
+    opacity: 0.6;
+}
+#content .tickets-list{
+    margin-top: 39px;
+    background-color: #fff;
+}
+#content .tickets-list li{
+    list-style-type: none;
+    font-size: 15px;
+    color: #757575;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+#content .sold-out{
+    font-size: 15px;
+    background-color: #f44336;
+    margin-left: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+}
+#content .number{
+    /* khi thẻ mà có float thì có thẻ hiểu là thể 
+    đó là thẻ display block */
+    float: right;
+    border-radius: 50%;
+    margin-right: 16px;
+    margin-bottom: 2px;
+    background-color: #000;
+   padding: 3px 8px;
+   text-align: center;
+   margin-top: -3px;
+}
+#content .places-list{
+    padding-top: 32px;
+   
+   
+
+}
+#content .places-item{
+    padding: 0px 8px;
+    color: #000;
+    float: left;
+    width: 33.3333%;
+}
+#content .places-content{
+    margin-top: -4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fff;
+    padding-bottom: 25px;
+}
+#content .places-heading{
+    font-size: 15px;
+    padding: 16px 0px;
+    
+
+}
+#content .anh-hover{
+    width: 100%;
+}
+#content .places-subheading{
+    margin: 8px 0px;
+    margin-bottom: 16px;
+    opacity: 0.60;
+
+}
+#content .centent_places{
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+
+#content .anh-hover:hover{
+    opacity: 0.60;
+}
+#content .contact-section{
+    width: 800px;
+   /* trên dưới 64px, trái phải 0 */
+   padding: 64px 16px;
+   /* canh chỉnh chính giữa của khối div */
+   margin-left: auto;
+   margin-right: auto;
+}
+#content .contact-heading{
+    font-size: 30px;
+    padding: 10px 0px;
+}
+#content .contact-subheading{
+    opacity: 0.60;
+    padding: 15px 0px;
+}
+#content .row-section{
+    
+    padding: 32px 0px;
+}
+.contact-info{
+    line-height: 1.4;
+    font-size: 18px;
+}
+.contact-info i[class*="ti-"]{
+    width: 30px;
+    display: inline-block;
+}
+/* #content .row{
+    margin: 0px 0px 16px;
+    font-size: 18px;
+} */
+/* section map */
+
+#content .map-section img{
+    width: 100%;
+}
+
+#footer{
+    padding: 64px 16px;
+    background-color: #f7f7f7;
+}
+#footer .socials{
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+#footer .link_banquyen{
+    margin: 15px 0px;
+}
+#footer .socials{
+    font-size: 24px;
+    color: #ccc !important;
+}
+
+#footer .socials a{
+    color: rgb(0,0,0,0.6);
+    text-decoration: none;
+}
+#footer .link_banquyen a:hover,
+#footer .socials a:hover{
+    color: rgb(0,0,0,0.4);
+}
+#footer .link_banquyen {
+    color: rgb(0,0,0,0.6);
+}
+#footer .link_banquyen a{
+    color: rgb(0,0,0,0.6);
+}
